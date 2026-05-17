@@ -5,7 +5,7 @@ import Alarmes from './Alarmes.jsx';
 
 export function AppRoutes() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/Acorda-acorda'>
       <Routes>
 
         <Route path="/" element={<App />} />
