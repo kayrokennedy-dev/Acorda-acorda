@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Lily+Script+One&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&family=Silkscreen:wght@400;700&family=Teko:wght@300..700&family=VT323&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#area-gato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 35vh;
+    border-radius: 0px 0px 150px 150px;
+    background-color: #4B477E;
+
+    #cat-editar{
+        display: block;
+        width: 328px;
+    }
+    #arrow{
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        background-color: transparent;
+        border: none;
+    }
+}
+#edição{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #322862;
+    border-radius: 30px 30px 0px 0px;
+    width: 100vw;
+    height: 60vh;
+
+    #relogio-edi{
+        display: flex;
+        background-color: #4B477E;
+        color: #ffffff;
+        width: 312px;
+        height: 108px;
+        border-radius: 25px;
+        font-size: 60px;
+        padding: 10px;
+        justify-content: space-around;
+        align-items: center;
+        font-family: 'Lily Script One';
+
+        input{
+            background-color: #6355A7;
+            text-align: center;
+            border-radius: 20px;
+            border: none;
+            width: 90px;
+            height: 90px;
+            font-size: 50px;
+            color: #ffffff;
+            font-family: 'Lily Script One';
+
+
+            &::placeholder{
+                font-family: 'Lily Script One';
+                color: #ffffff;
+                font-size: 50px;
+                text-align: center;
+            }
+        }
+    }
+    #som, #repetir, #soneca{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #4B477E;
+        width: 333px;
+        height: 57px;
+        color: #ffffff;
+        font-family: 'Poppins';
+        border-radius: 25px;
+
+        #ed-soneca, #ed-repetir, #ed-som{
+            width: 80px;
+            height: 30px;
+            color: #ffffff;
+            font-size: 22px;
+            font-family: 'Poppins';
+            background-color: transparent;
+            border: none;
+        }
+        #ed-soneca{
+            width: 110px;
+        }
+    }
+    #salvar{
+        background-color: #6355A7;
+        width: 278px;
+        height: 48px;
+        border-radius: 30px;
+        border: none;
+        font-size: 25px;
+        font-family: 'Poppins';
+        color: #ffffff;
+    }
+}
