@@ -140,19 +140,32 @@
         height: 50vh;
     }
 }
-
-@media (min-width: 1000px) {
+@media (min-width: 375px){
     #body #cat-main{
-        position: sticky;
-        width: 300px;
+        left: 19vw;
+        width: 250px;
+    }
+    #dia{
+        font-size: 20px;
+    }
+}
+@media (min-width: 393px) {
+    #body #cat-main{
+        left: 10vw;
+        width: 350px;
+    }
+    #dia{
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 425px) {
+    #body #cat-main{
+        width: 350px;
     }
     #area-relogio{
         min-width: 100vw;
         justify-content: center;
-
-        #data{
-        margin-left: 100px;
-        }
     }
 }
 @media (min-width: 768px) {
@@ -169,7 +182,7 @@
         }
     }
 }
-@media (min-width: 425px) {
+@media (min-width: 1000px) {
     #body #cat-main{
         position: sticky;
         width: 300px;
@@ -177,5 +190,11 @@
     #area-relogio{
         min-width: 100vw;
         justify-content: center;
+
+        #data{
+        margin-left: 100px;
+        }
     }
 }
+
+
