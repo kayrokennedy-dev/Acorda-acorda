@@ -42,7 +42,7 @@
         width: 0px;
     }
     to{
-        width: 387px;
+        width: 337px;
     }
 }
 @keyframes aparecer {
@@ -50,6 +50,9 @@
         width: 0px;
     }
     to{
-        width: 200px;
+        width: 150px;
     }
+}
+@media (min-width: 320px) {
+    
 }
