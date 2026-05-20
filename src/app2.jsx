@@ -111,18 +111,20 @@ function App2() {
                     <span id='mês'>{mes}</span>
                 </div>
             </div>
-            <img src={gatinho} alt="" id='cat-main'/>
+            <div id='container-gato'>
+                <img src={gatinho} alt="" id='cat-main'/>
+            </div>
             <div id='alarmes'>
                 {alarme && alarme.hora ? (
                     <div id='card-alarme'>
-                        <span id='dia'></span>
+                        <span id='bolinha-dia'></span>
                         <h2>{alarme.hora} : {alarme.minuto}</h2>
-                        <button id='excluir' onClick={excluirAlarme}>Excluir</button>                    
+                        <button id='excluir' onClick={excluirAlarme}>Excluir</button>             
                     </div>
                 ) : (
                     <span id='sem-alarme'>Sem alarmes no momento</span>
                 )}
-                <button id='adicionar' onClick={irParaAdcionar}>Adcionar</button>
+                <button id='adicionar' onClick={irParaAdcionar}>Adicionar</button>
             </div>
         </div>
     );

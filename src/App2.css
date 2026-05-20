@@ -12,28 +12,33 @@
     justify-content: space-between;
     align-items: center;
 
-    #cat-main{
-        display: block;
-        position: absolute;
-        bottom: 47vh;
-        left: 2vw;
-        width: 387px;
-        animation: flutuar 3s linear infinite;
+    #container-gato{
+        display: flex;
+        flex: 1; /* Faz essa caixinha ocupar todo o espaço do meio entre o relógio e o alarme */
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        position: relative;
+        
+        #cat-main{
+            display: block;
+            position: absolute;
+            width: min(320px, 65vw);
+            height: auto;
+            animation: flutuar 3s linear infinite;
+        }
     }
 }
 
 @keyframes flutuar {
-    0%{
-        bottom: 48vh;
+    0% {
+        transform: translateY(0);
     }
-    25%{
-        bottom: 47vh;
+    50% {
+        transform: translateY(-15px); /* Sobe 15 pixels de forma suave */
     }
-    50%{
-        bottom: 46vh;
-    }
-    100%{
-        bottom: 48vh;
+    100% {
+        transform: translateY(0);
     }
 }
 
@@ -115,7 +120,7 @@
         width: 330px;
         border-radius: 25px;
 
-        #dia{
+        #bolinha-dia{
             width: 29px;
             height: 27px;
             background-color: #CDCD39;
@@ -185,8 +190,8 @@
 }
 @media (min-width: 1000px) {
     #body #cat-main{
-        left: 30vw;
-        width: 20vw;
+        left: 40vw;
+        width: 25vw;
     }
     #area-relogio{
         min-width: 100vw;
