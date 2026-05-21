@@ -3,6 +3,9 @@ import gatinho from './assets/gatinho.png'
 import './App2.css'
 import { useNavigate } from 'react-router-dom';
 import Alarme from './Alarmes';
+import { CiAlarmOn } from "react-icons/ci";
+import { TbZzz } from "react-icons/tb";
+
 
 function App2() {
 
@@ -94,10 +97,17 @@ function App2() {
             alert("Alarme excluido com sucesso!!");
     }
 
+    const irparacronometro = () => {
+        navigate ('/cronometros')
+    }
+
     const irParaAdcionar = () => {
         navigate('/Alarmes');
     }
     
+    const irparaRelaxa = () => {
+        navigate('/Relaxa')
+    }
     return (
         <div id='body'>
             <div id='area-relogio'>
@@ -124,7 +134,12 @@ function App2() {
                 ) : (
                     <span id='sem-alarme'>Sem alarmes no momento</span>
                 )}
+                
+            </div>
+            <div id='menu'>
+                <button id='cronometro' onClick={irparacronometro}><CiAlarmOn /></button>
                 <button id='adicionar' onClick={irParaAdcionar}>Adicionar</button>
+                <button id='rlx' onClick={irparaRelaxa}><TbZzz /></button>
             </div>
         </div>
     );

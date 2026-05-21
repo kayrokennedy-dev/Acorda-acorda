@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#body-Relaxa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100vw;
+    min-height: 100vh;
+    padding: 25px 15px 100px 15px;
+    background-color: #1C1A32;
+
+    #titulo-relx{
+        font-family: 'poppins';
+        color: #ffffff;
+        display: block;
+        font-size: 24px;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    #container-cards {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+
+    #mix{
+        background-color: #4B477E;
+        max-width: 340px; /* Evita que aperte demais nas bordas de aparelhos como iPhone SE */
+        height: 240px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 10px 10px #4e437c52;
+
+        iframe{
+            max-width: 340px; /* Evita que aperte demais nas bordas de aparelhos como iPhone SE */
+            height: 240px;
+            border-radius: 20px;
+            padding: 10px;
+        }
+    }
+    #menu{
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    #titulo-relx {
+        font-size: 32px;
+        margin-bottom: 40px;
+    }
+
+    #container-cards {
+        flex-direction: row;
+        flex-wrap: wrap; /* Permite colocar dois cards lado a lado se houver espaço */
+        justify-content: center;
+        max-width: 900px;
+        gap: 30px;
+    }
+
+    .mix-card {
+        max-width: 400px; /* Aumenta o tamanho do card no Tablet */
+        height: 280px;
+    }
+}
+
+/* Telas Grandes (Computadores e Laptops - a partir de 1024px) */
+@media (min-width: 1024px) {
+    #container-cards {
+        max-width: 1300px; /* Permite alinhar até 3 cards por linha no monitor */
+        gap: 35px;
+    }
+
+    .mix-card {
+        max-width: 380px;
+        height: 270px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    /* Efeito de hover profissional que só funciona no PC */
+    .mix-card:hover {
+        transform: scale(1.03);
+    }
+}
