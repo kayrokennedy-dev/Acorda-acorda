@@ -26,6 +26,7 @@
             width: min(320px, 65vw);
             height: auto;
             animation: flutuar 3s linear infinite;
+            z-index: 3;
         }
     }
 }
@@ -60,8 +61,8 @@
         text-align: center;
         color: #ffffff;
     }
-    #data{
-        font-size: 30px;
+    #data #dia-texto, #numero-texto, #mes-texto {
+        font-size: 24px; /* Ajuste de fonte para celular */
         font-family: 'Lily Script One';
         text-align: center;
         color: #ffffff;
@@ -138,66 +139,58 @@
     }
 }
 @keyframes aparecer3 {
-    from{
-        height: 0;
+    from {
+        transform: translateY(100%); /* Começa fora da tela por baixo */
     }
-    to{
-        height: 50vh;
-    }
-}
-@media (min-width: 375px){
-    #body #cat-main{
-        left: 10vw;
-        width: 80vw;
-    }
-    #dia{
-        font-size: 20px;
+    to {
+        transform: translateY(0); /* Sobe para a posição final */
     }
 }
-@media (min-width: 393px) {
-    #body #cat-main{
-        left: 5vw;
-        width: 90vw;
+@media (min-width: 375px) {
+    #body #area-relogio #data{
+        #dia-texto #mes-texto #numero-texto{
+            font-size: 22px;
+        }
     }
-    #dia{
-        font-size: 30px;
+    #alarmes gap{
+        gap: 25px;
     }
 }
 
-@media (min-width: 425px) {
-    #body #cat-main{
-        width: 90vw;
-        left: 8vw;
-    }
-    #area-relogio{
-        min-width: 100vw;
-        justify-content: center;
+@media (min-width: 390px) {
+    
+}
+@media (min-width: 412px) {
+    #body #area-relogio #data {
+        #dia-texto, #numero-texto, #mes-texto {
+            font-size: 24px;
+        }
     }
 }
 @media (min-width: 768px) {
-    #body #cat-main{
-        left: 20vw;
-        width: 60vw;
+    #body #cat-main {
+        width: 280px; /* Tamanho fixo ligeiramente menor que no PC */
     }
-    #area-relogio{
-        min-width: 100vw;
+    #body #area-relogio {
         justify-content: center;
-
-        #data{
-            margin-left: 100px;
+        flex-direction: row; /* Volta a organizar em linha */
+        flex-wrap: wrap;
+        gap: 20px;
+        #data {
+            margin-left: 0; /* Centraliza a data no tablet */
         }
     }
 }
 @media (min-width: 1000px) {
-    #body #cat-main{
-        left: 40vw;
-        width: 25vw;
+    #body #cat-main {
+        width: 320px; /* Tamanho maior para PC */
     }
-    #area-relogio{
+    #body #area-relogio {
         min-width: 100vw;
-
-        #data{
-        margin-left: 100px;
+        justify-content: center;
+        flex-direction: row;
+        #data {
+            margin-left: 100px; /* Espaçamento da data no PC */
         }
     }
 }

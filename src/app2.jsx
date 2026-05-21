@@ -106,9 +106,9 @@ function App2() {
                 <span id='segundos'>{segundo}</span>
 
                 <div id='data'>
-                    <span id='dia'>{dia}, </span>
-                    <span id='numero'>{numero} de </span>
-                    <span id='mês'>{mes}</span>
+                    <span id='dia-texto'>{dia}, </span>
+                    <span id='numero-texto'>{numero} de </span>
+                    <span id='mes-texto'>{mes}</span>
                 </div>
             </div>
             <div id='container-gato'>
